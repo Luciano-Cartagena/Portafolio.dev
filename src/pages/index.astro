@@ -1,0 +1,82 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import BriefCase from '../components/icons/BriefCase.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+// 1:45 Welcome to Astro! Wondering what to do next? Check out the Astro do	cumentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout
+	title="Portfolio de Luciano Cartagena - Desarrollador Web y Programador Web con +2 años de experiencia"
+	description="Contrata a Luciano Cartagena, un desarrollador web con más de 2 años de experiencia. Especializado en crear sitios web rápidos y accesibles. Basado en Buenos Aires, Argentina."
+>
+	
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<img 
+        		src="/PERFIL.jpg" 
+        		alt="Foto de Luciano" 
+        		class="rounded-full h-12 w-12 mb-4" />
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 ">
+			Hey, soy Luciano 
+			<a 
+			href="https://www.linkedin.com/in/lucianocartagena/" 
+			target="_blank"
+			rel="noopener"
+			class="flex justify-center items-center"
+			>
+			<Badge>Disponible para trabajar</Badge>
+			</a>
+			</h1>
+		<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] ">
+			<span> +2 años de experiencia. </span>
+			<span class="text-yellow-200/90"> Desarrollador Web. </span>
+			<span class="text-red-200/90 "> De Buenos Aires, Argentina. </span>
+			<span class="opacity-75"> Especializado en crear sitios web rápidos y accesibles. </span>
+		</h2>
+
+		<nav class="flex gap-4 mt-8 flex-wrap">
+			<SocialPill href="https://www.linkedin.com/in/lucianocartagena/">
+				<LinkedInIcon class="w-4 h-4 md:w-6 md:h-6" />
+				Linkedin
+			</SocialPill>
+			<SocialPill href="https://github.com/Luciano-Cartagena">
+				<GitHubIcon class="w-4 h-4 md:w-6 md:h-6" />
+				GitHub
+			</SocialPill>
+			<SocialPill href="mailto:lucianocartagena17@gmail.com">
+				<MailIcon class="w-4 h-4 md:w-6 md:h-6" />
+				Lucianocartagena17@gmail.com
+			</SocialPill>
+		</nav>
+	</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 
+			class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<BriefCase class="w-7 h-7"/>
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 
+			class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<CodeIcon class="w-7 h-7"/>
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>

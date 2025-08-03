@@ -1,0 +1,25 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+        title: "Tecnico Electrónico en Telecomunicaciones - Liefrink Y Marx",
+        description: "Técnico en Electrónica y Telecomunicaciones con experiencia en instalación, mantenimiento y reparación de equipos electrónicos y sistemas de telecomunicaciones. Mis logros incluyen la optimización de redes de comunicación y la implementación de soluciones tecnológicas para mejorar la eficiencia operativa."
+    },
+    {
+        date: "Agosto 2023 - Presente",
+        title: "Proyecto Personal Full Stack Web - Desarrollo Web",
+        description: "Desarrollo de un proyecto personal de desarrollo web full stack, donde he aplicado mis habilidades en programación y diseño web para crear una aplicación funcional y atractiva. Este proyecto me ha permitido mejorar mis competencias técnicas y explorar nuevas tecnologías en el ámbito del desarrollo web."
+    }
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+{EXPERIENCE.map(experience => (
+    <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+    </li>
+))}                 
+
+</ol>
+
